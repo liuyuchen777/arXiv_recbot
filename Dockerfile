@@ -12,4 +12,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["./run.sh"]
+RUN chmod +x run.sh docker-entrypoint.sh
+
+CMD ["./docker-entrypoint.sh"]
